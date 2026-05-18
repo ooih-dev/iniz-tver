@@ -4,7 +4,18 @@ import { SITE } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
   const now = new Date().toISOString();
-  const pages = ["", "/burenie-skvazhin", "/inzhenernye-izyskaniya", "/vodosnabzhenie", "/faq", "/kontakty"];
+  const pages = [
+    "",
+    "/artezianskaya-skvazhina",
+    "/abissinskaya-skvazhina",
+    "/pesochnaya-skvazhina",
+    "/analiz-vody",
+    "/burenie-skvazhin",
+    "/inzhenernye-izyskaniya",
+    "/vodosnabzhenie",
+    "/faq",
+    "/kontakty",
+  ];
   return pages.map((p) => ({
     url: base + p,
     lastModified: now,

@@ -12,7 +12,7 @@ export const SITE = {
   city: "Тверь",
   founded: 2010,
   warrantyYears: 5,
-  url: "https://iniz-tver.ru",
+  url: "https://iniz-tver.vercel.app",
   ogImage: "/img/rig1.png",
   legal: {
     ogrn: "1106952009999",
@@ -26,6 +26,7 @@ export const SITE = {
 
 export const NAV = [
   { href: "/burenie-skvazhin", label: "Бурение скважин" },
+  { href: "/analiz-vody", label: "Анализ воды" },
   { href: "/inzhenernye-izyskaniya", label: "Геология (ИГИ)" },
   { href: "/vodosnabzhenie", label: "Водоснабжение" },
   { href: "/faq", label: "FAQ" },
