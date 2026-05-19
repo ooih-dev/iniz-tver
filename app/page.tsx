@@ -62,12 +62,14 @@ const OTHER = [
 ];
 
 const WHY = [
-  ["15 лет в Тверской области", "Бурим с 2010 года, более 1 200 скважин."],
-  ["Своя буровая техника", "4 установки, включая малогабаритные — без аренды."],
-  ["Штатные геологи и мастера", "Без субподряда. Работу ведёт и сдаёт один мастер."],
-  ["Договор и гарантия", "Фиксированная стоимость в смете, гарантия до 6 лет."],
-  ["Своя лаборатория", "Анализ воды и грунтов без отправки в Москву."],
-  ["Выезд за 24 часа", "Инженер на объекте в течение суток, расчёт в день выезда."],
+  ["Гарантия 6 лет", "На буровые работы и геологические отчёты. Прописываем в договоре, выезд по сервисной заявке."],
+  ["Свои инженеры", "Штатные геологи и буровые мастера со стажем 10+ лет. Без посредников и субподряда."],
+  ["4 буровые установки", "УРБ-2А-2, ПБУ-2 и две малогабаритки. Зайдём на участок, где другие отказались."],
+  ["Своя лаборатория", "Грунты и воду исследуем сами. Не возим в Москву — отчёт быстрее на 5–10 дней."],
+  ["Отчёт под экспертизу", "СП 47.13330 и СП 22.13330. 100% наших отчётов прошли экспертизу с 2010 года."],
+  ["Зимой и летом", "Бурим круглый год. Зимняя бригада, обогрев, режим работы при −25 °C."],
+  ["Лицензия и СРО", "Лицензия Роснедра, членство в СРО. Работаем с госконтрактами и тендерами."],
+  ["Выезд за 24 часа", "Инженер на объекте в течение суток. Замер, расчёт и КП — в день выезда."],
 ];
 
 const CASES = [
@@ -198,19 +200,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY */}
-      <section>
+      {/* WHY — тёмный блок с оранжевыми акцентами (как в оригинале INIZ.html) */}
+      <section className="bg-[#08151a]">
         <div className="container-x">
           <div className="max-w-2xl mb-10">
-            <div className="eyebrow">Почему ИНИЗ</div>
-            <h2 className="text-3xl md:text-5xl font-bold mt-4">Бурим сами, отвечаем за результат</h2>
+            <div className="eyebrow text-[#c98a3b]">Почему ИНИЗ</div>
+            <h2 className="text-3xl md:text-5xl font-bold mt-4 text-white">
+              8 причин, <em className="not-italic text-[#c98a3b]">по которым нас выбирают</em>
+            </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#14282b] border border-[#14282b] rounded-2xl overflow-hidden">
             {WHY.map(([t, d], i) => (
-              <div key={t} className="bg-cream rounded-2xl p-6">
-                <div className="font-mono text-xs text-teal-700">{String(i + 1).padStart(2, "0")}</div>
-                <div className="font-bold mt-2">{t}</div>
-                <p className="text-sm text-neutral-600 mt-2 leading-relaxed">{d}</p>
+              <div
+                key={t}
+                className="bg-[#08151a] hover:bg-[#0c1f23] transition p-6 flex flex-col gap-3 min-h-[210px]"
+              >
+                <div className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#c98a3b]">
+                  {String(i + 1).padStart(2, "0")} / 08
+                </div>
+                <div className="font-bold text-lg text-white mt-1">{t}</div>
+                <p className="text-sm text-[#9bb0b1] leading-relaxed mt-auto">{d}</p>
               </div>
             ))}
           </div>
