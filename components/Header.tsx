@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LeadButton } from "@/components/LeadButton";
 import { NAV, SITE } from "@/lib/site";
 
 export function Header() {
@@ -24,9 +25,7 @@ export function Header() {
           <a href={`tel:${SITE.phoneTel}`} className="hidden sm:block text-sm font-semibold text-teal-700">
             {SITE.phone}
           </a>
-          <Link href="/kontakty" className="btn btn-primary text-sm py-2.5 px-4">
-            Заявка
-          </Link>
+          <LeadButton className="btn btn-primary text-sm py-2.5 px-4">Заявка</LeadButton>
         </div>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LeadButton } from "@/components/LeadButton";
 import { SITE } from "@/lib/site";
 
 export function CTABlock({ title, lead }: { title?: string; lead?: string }) {
@@ -21,9 +21,9 @@ export function CTABlock({ title, lead }: { title?: string; lead?: string }) {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href={`tel:${SITE.phoneTel}`} className="btn btn-amber">{SITE.phone}</a>
-            <Link href="/kontakty" className="btn btn-ghost text-white border-white/30 hover:bg-white/10">
+            <LeadButton className="btn btn-ghost text-white border-white/30 hover:bg-white/10">
               Оставить заявку
-            </Link>
+            </LeadButton>
           </div>
         </div>
         <div className="hidden md:block">

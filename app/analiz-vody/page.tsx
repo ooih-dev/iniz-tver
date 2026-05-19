@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
+import { LeadButton } from "@/components/LeadButton";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
 
@@ -65,7 +66,7 @@ export default function Page() {
               По результату выдаём официальное заключение и подбираем систему фильтрации под конкретные показатели. Цена анализа — от 5 000 ₽.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/kontakty" className="btn btn-primary">Сдать воду на анализ</Link>
+              <LeadButton>Сдать воду на анализ</LeadButton>
               <a href={`tel:${SITE.phoneTel}`} className="btn btn-ghost">{SITE.phone}</a>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
+import { LeadButton } from "@/components/LeadButton";
 import { PriceCards } from "@/components/PriceCards";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
@@ -60,7 +61,7 @@ export default function Page() {
               Работаем под ключ: бурение, обсадка, кессон, насос, разводка и паспорт скважины. Своя буровая техника, штатные геологи, гарантия до 6 лет.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/kontakty" className="btn btn-primary">Рассчитать стоимость</Link>
+              <LeadButton>Рассчитать стоимость</LeadButton>
               <a href={`tel:${SITE.phoneTel}`} className="btn btn-ghost">{SITE.phone}</a>
             </div>
           </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTABlock } from "@/components/CTA";
+import { LeadButton } from "@/components/LeadButton";
 import { JsonLd, ServiceSchema, FaqSchema } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -66,7 +67,7 @@ export default function Page() {
               Артезианские, песчаные, абиссинские скважины «под ключ» — бурение, обсадка, обустройство кессоном, насос и разводка. Своя техника, штатные мастера, паспорт скважины и гарантия 5 лет.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/kontakty" className="btn btn-primary">Заявка на расчёт</Link>
+              <LeadButton>Заявка на расчёт</LeadButton>
               <a href={`tel:${SITE.phoneTel}`} className="btn btn-ghost">{SITE.phone}</a>
             </div>
           </div>

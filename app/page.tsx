@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
+import { LeadButton } from "@/components/LeadButton";
 import { JsonLd, LocalBusinessSchema, FaqSchema } from "@/components/JsonLd";
 import { EXTRAS, ON_REQUEST } from "@/lib/prices";
 
@@ -105,7 +106,7 @@ export default function Home() {
               Артезианская, песчаная, абиссинская скважина. Водоснабжение под ключ, инженерно-геологические изыскания и анализ воды. Своя техника, штатные геологи, договор и гарантия.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/kontakty" className="btn btn-primary">Рассчитать стоимость</Link>
+              <LeadButton>Рассчитать стоимость</LeadButton>
               <a href={`tel:${SITE.phoneTel}`} className="btn btn-ghost">{SITE.phone}</a>
             </div>
             <div className="mt-9 grid grid-cols-4 gap-4 max-w-lg">

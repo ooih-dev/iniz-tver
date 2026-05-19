@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LeadButton } from "@/components/LeadButton";
 import { PACKAGES, PRICE_NOTE } from "@/lib/prices";
 
 export function PriceCards() {
@@ -29,12 +29,11 @@ export function PriceCards() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/kontakty"
+            <LeadButton
               className={`btn mt-6 w-full justify-center ${p.popular ? "btn-amber" : "btn-primary"}`}
             >
               Заказать расчёт
-            </Link>
+            </LeadButton>
           </article>
         ))}
       </div>

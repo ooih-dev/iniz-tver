@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
+import { LeadButton } from "@/components/LeadButton";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
 import { DRILL_RATE, PRICE_NOTE } from "@/lib/prices";
@@ -70,7 +71,7 @@ export default function Page() {
               Делаем под ключ: бурение, обсадка с фильтром, прокачка, обустройство и паспорт скважины. Малогабаритная техника заходит даже на тесные участки.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/kontakty" className="btn btn-primary">Узнать стоимость</Link>
+              <LeadButton>Узнать стоимость</LeadButton>
               <a href={`tel:${SITE.phoneTel}`} className="btn btn-ghost">{SITE.phone}</a>
             </div>
           </div>
