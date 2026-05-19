@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
 import { InlineCTA } from "@/components/InlineCTA";
+import { LinkCards } from "@/components/LinkCards";
 import { JsonLd, ServiceSchema, FaqSchema } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -21,16 +22,16 @@ const TYPES = [
 ];
 
 const CLUSTERS = [
-  "Анализ воды из скважины",
-  "Артезианская скважина под ключ",
-  "Абиссинская скважина-игла",
-  "Песчаная скважина на даче",
-  "Ремонт, чистка и прокачка скважин",
-  "Обустройство кессоном, оголовком, адаптером",
-  "Насосное оборудование",
-  "Паспорт скважины и документы",
-  "Водоснабжение бизнеса и объектов",
-  "Водоснабжение частного дома и участка",
+  { href: "/artezianskaya-skvazhina", title: "Артезианская скважина под ключ", desc: "Глубокая скважина на известняк, 60–250 м" },
+  { href: "/abissinskaya-skvazhina", title: "Абиссинская скважина-игла", desc: "Бюджетный вариант для сезонной дачи" },
+  { href: "/pesochnaya-skvazhina", title: "Песчаная скважина на даче", desc: "Скважина на песчаный горизонт, 20–50 м" },
+  { href: "/analiz-vody", title: "Анализ воды из скважины", desc: "Лабораторный анализ, официальное заключение" },
+  { href: "/vodosnabzhenie", title: "Обустройство скважины", desc: "Кессон, оголовок, адаптер, обвязка" },
+  { href: "/vodosnabzhenie", title: "Насосное оборудование", desc: "Подбор и монтаж скважинного насоса" },
+  { href: "/vodosnabzhenie", title: "Водоснабжение дома и участка", desc: "Разводка по дому, ввод, автоматика" },
+  { href: "/vodosnabzhenie", title: "Водоснабжение бизнеса и объектов", desc: "Системы для предприятий и объектов" },
+  { href: "/kontakty", title: "Ремонт и прокачка скважин", desc: "Промывка, чистка, замена насоса" },
+  { href: "/kontakty", title: "Паспорт скважины и документы", desc: "Паспорт, гарантия, сопровождение" },
 ];
 
 const STEPS = [
@@ -135,11 +136,7 @@ export default function Page() {
             <div className="eyebrow">Полный спектр услуг</div>
             <h2 className="text-3xl md:text-5xl font-bold mt-4">Что мы ещё делаем по скважинам</h2>
           </div>
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {CLUSTERS.map((c) => (
-              <li key={c} className="bg-cream rounded-xl px-5 py-4 border border-neutral-200 text-sm font-medium">{c}</li>
-            ))}
-          </ul>
+          <LinkCards items={CLUSTERS} />
         </div>
       </section>
 

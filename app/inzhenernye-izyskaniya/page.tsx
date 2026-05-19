@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
 import { InlineCTA } from "@/components/InlineCTA";
+import { LinkCards } from "@/components/LinkCards";
 import { JsonLd, ServiceSchema, FaqSchema } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -31,12 +32,12 @@ const FOR_WHOM = [
 ];
 
 const CLUSTERS = [
-  "Гидрогеологические изыскания",
-  "Экспертиза изысканий",
-  "Отчёт и проектная документация ИГИ",
-  "Геология участка под строительство",
-  "Инженерно-геодезические работы и топосъёмка",
-  "Стоимость и заказ изысканий",
+  { href: "/kontakty", title: "Гидрогеологические изыскания", desc: "Изучение подземных вод на участке" },
+  { href: "/kontakty", title: "Экспертиза изысканий", desc: "Сопровождение отчёта до заключения" },
+  { href: "/kontakty", title: "Отчёт и проектная документация", desc: "По СП 47.13330 и СП 22.13330" },
+  { href: "/kontakty", title: "Геология участка под строительство", desc: "Оценка грунтов под фундамент" },
+  { href: "/kontakty", title: "Геодезические работы и топосъёмка", desc: "Топоплан и геодезия для проекта" },
+  { href: "/kontakty", title: "Стоимость и заказ изысканий", desc: "Расчёт по вашему объекту" },
 ];
 
 const FAQ = [
@@ -121,11 +122,7 @@ export default function Page() {
             <div className="eyebrow">Связанные работы</div>
             <h2 className="text-3xl md:text-5xl font-bold mt-4">Что мы ещё делаем по изысканиям</h2>
           </div>
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {CLUSTERS.map((c) => (
-              <li key={c} className="bg-cream rounded-xl px-5 py-4 border border-neutral-200 text-sm font-medium">{c}</li>
-            ))}
-          </ul>
+          <LinkCards items={CLUSTERS} />
         </div>
       </section>
 
