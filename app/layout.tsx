@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LeadModalProvider } from "@/components/LeadModalContext";
 import { LeadModal } from "@/components/LeadModal";
+import { FloatingContacts } from "@/components/FloatingContacts";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
           <LeadModal />
+          <FloatingContacts />
         </LeadModalProvider>
       </body>
     </html>

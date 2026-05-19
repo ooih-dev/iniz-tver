@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
+import { InlineCTA } from "@/components/InlineCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
 
@@ -159,6 +160,8 @@ export default function Page() {
           </p>
         </div>
       </section>
+
+      <InlineCTA text="Поможем отобрать пробу и сдать воду в лабораторию." button="Заказать анализ воды" />
 
       <section>
         <div className="container-x">

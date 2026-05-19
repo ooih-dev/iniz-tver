@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
+import { InlineCTA } from "@/components/InlineCTA";
 import { PriceCards } from "@/components/PriceCards";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
@@ -130,6 +131,8 @@ export default function Page() {
           <PriceCards />
         </div>
       </section>
+
+      <InlineCTA text="Определим глубину известняка и стоимость по вашему участку." button="Рассчитать скважину" />
 
       <section className="bg-cream">
         <div className="container-x">

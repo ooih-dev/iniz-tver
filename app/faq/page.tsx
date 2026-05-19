@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CTABlock } from "@/components/CTA";
+import { InlineCTA } from "@/components/InlineCTA";
 import { JsonLd, FaqSchema } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -87,6 +88,8 @@ export default function Page() {
           </div>
         </section>
       ))}
+
+      <InlineCTA text="Не нашли ответ на свой вопрос? Спросите напрямую — отвечает инженер." button="Задать вопрос" />
 
       <CTABlock />
     </>

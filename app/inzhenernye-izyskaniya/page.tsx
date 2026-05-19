@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
+import { InlineCTA } from "@/components/InlineCTA";
 import { JsonLd, ServiceSchema, FaqSchema } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -110,6 +111,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <InlineCTA text="Оценим объём изысканий по вашему объекту." button="Запросить расчёт" />
 
       {/* SUB-TOPICS */}
       <section>

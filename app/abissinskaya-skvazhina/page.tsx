@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
+import { InlineCTA } from "@/components/InlineCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, ServiceSchema, FaqSchema, BreadcrumbSchema } from "@/components/JsonLd";
 import { PRICE_NOTE } from "@/lib/prices";
@@ -142,6 +143,8 @@ export default function Page() {
           <p className="text-xs text-neutral-500 mt-3">{PRICE_NOTE}</p>
         </div>
       </section>
+
+      <InlineCTA text="Мастер оценит участок и назовёт цену скважины-иглы." button="Вызвать мастера" />
 
       <section className="bg-cream">
         <div className="container-x">

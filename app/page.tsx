@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CTABlock } from "@/components/CTA";
 import { LeadButton } from "@/components/LeadButton";
+import { InlineCTA } from "@/components/InlineCTA";
 import { JsonLd, LocalBusinessSchema, FaqSchema } from "@/components/JsonLd";
 import { EXTRAS, ON_REQUEST } from "@/lib/prices";
 
@@ -162,6 +163,8 @@ export default function Home() {
         </div>
       </section>
 
+      <InlineCTA text="Не определились с типом скважины? Подскажем по вашему участку." button="Получить расчёт" />
+
       {/* OTHER SERVICES */}
       <section className="bg-cream">
         <div className="container-x">
@@ -213,6 +216,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <InlineCTA text="Выезд инженера и расчёт стоимости — бесплатно." button="Записаться на выезд" />
 
       {/* CASES */}
       <section className="bg-cream">
