@@ -25,6 +25,7 @@ export const SITE = {
 };
 
 export const NAV = [
+  { href: "/", label: "Главная" },
   { href: "/burenie-skvazhin", label: "Бурение скважин" },
   { href: "/analiz-vody", label: "Анализ воды" },
   { href: "/inzhenernye-izyskaniya", label: "Геология (ИГИ)" },

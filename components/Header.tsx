@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { LeadButton } from "@/components/LeadButton";
+import { MobileMenu } from "@/components/MobileMenu";
 import { NAV, SITE } from "@/lib/site";
 
 export function Header() {
@@ -21,11 +22,12 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a href={`tel:${SITE.phoneTel}`} className="hidden sm:block text-sm font-semibold text-teal-700">
             {SITE.phone}
           </a>
           <LeadButton className="btn btn-primary text-sm py-2.5 px-4">Заявка</LeadButton>
+          <MobileMenu />
         </div>
       </div>
     </header>
